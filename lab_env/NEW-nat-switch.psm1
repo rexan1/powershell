@@ -33,7 +33,7 @@ function New-NATSwitch
     [string]$Name,
         
     [Parameter(Mandatory = $false)]
-    [string]$IPAddress = '172.16.10.1',
+    [string]$IPAddress = '10.11.12.15',
         
     [Parameter(Mandatory = $false)]
     [int]$PrefixLength = 24,
@@ -67,4 +67,4 @@ function New-NATSwitch
   }
 }
 
-#New-NATSwitch -Name Test -IPAddress 10.0.1.1 -PrefixLength 24 -NATName TestNAT 
+#New-NATSwitch -Name Test -IPAddress 10.11.12.15 -PrefixLength 24 -NATName TestNAT 
