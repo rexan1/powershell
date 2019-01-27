@@ -92,9 +92,9 @@ function New-LabVM
 
     Get-Disk $vhd.Number | Set-Disk -IsOffline $false
 
-    Set-Partition -PartitionNumber $x.PartitionNumber -NewDriveLetter T -DiskNumber $x.DiskNumber -ErrorAction SilentlyContinue 
+    Set-Partition -PartitionNumber $x.PartitionNumber -NewDriveLetter F -DiskNumber $x.DiskNumber -ErrorAction SilentlyContinue 
 
-    New-PSDrive -Name T -Root t:\ -PSProvider FileSystem | Out-Null
+    New-PSDrive -Name F -Root t:\ -PSProvider FileSystem | Out-Null
     
     Write-Verbose -Message 'Differencing disk mounted'
     
