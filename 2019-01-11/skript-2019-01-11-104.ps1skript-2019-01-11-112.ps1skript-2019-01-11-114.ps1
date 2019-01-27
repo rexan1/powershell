@@ -6,7 +6,15 @@ $elements
 #
 
 $elements.Protons
-#$elements.Protons | Measure -Average$file = Get-Content "C:\temp\elements2.csv"for ($count = 0; $count -lt $file.Length; $count++)
+
+#
+$elements.Protons | Measure -Average
+
+
+$file = Get-Content "C:\temp\elements2.csv"
+
+
+for ($count = 0; $count -lt $file.Length; $count++)
 
 {
     $col0 = ([string]$file[$count]).Split(',')[0]
@@ -16,4 +24,14 @@ $elements.Protons
     if ($col2 -eq $col3)
         {echo $col0} 
 
-    }#if ($elements.Protons = $elements.Neutrons){#Write-Host $elements #}
+    }
+
+
+
+
+
+
+
+#if ($elements.Protons = $elements.Neutrons){
+#Write-Host $elements 
+#}
